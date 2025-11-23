@@ -30,12 +30,12 @@
 
 1. Compile:
    ```bash
-   javac Merge-Sorted-Lists.java
+   javac Merging-Sorted-Lists.java
    ```
 
 2. Run:
    ```bash
-   java Merge-Sorted-Lists
+   java Merging-Sorted-Lists
    ```
 
 3. Output:
