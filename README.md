@@ -7,7 +7,7 @@
 
 ## Files Included
 
-### 1. MergeSortedLists_Aryan.java
+### 1. Merging-Sorted-Lists.java
 - Java program implementing the greedy merge algorithm using a **min-heap**.  
 - Accepts list sizes as input.  
 - Computes:
