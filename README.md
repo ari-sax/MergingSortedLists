@@ -1,65 +1,96 @@
 # Project 2: Merging Sorted Lists
 
-Author: Aryan Saxena
+**Author:** Aryan Saxena  
+**Purpose:** Implement the greedy merge algorithm for sorted lists, analyze its theoretical time complexity, experimentally measure merge cost and execution time, and compare the experimental results against the theoretical growth curve.
 
-Purpose: Implement the greedy merge algorithm for sorted lists, analyze
-its theoretical time complexity, experimentally measure merge cost and
-execution time, and compare the experimental results against the
-theoretical growth curve.
+---
 
-Files Included
+## Files Included
 
-MergeSortedLists_Aryan.java - Java program that implements the greedy
-merge algorithm using a min-heap. - Accepts list sizes as input. -
-Computes total merge cost and experimental runtime using
-System.nanoTime(). - Prints the results for each execution.
+### 1. MergeSortedLists_Aryan.java
+- Java program implementing the greedy merge algorithm using a **min-heap**.  
+- Accepts list sizes as input.  
+- Computes:
+  - Total merge cost  
+  - Experimental runtime using `System.nanoTime()`  
+- Prints results for each execution.
 
-graphs.py - Python script to visualize experimental results against
-adjusted theoretical values. - Computes theoretical values based on T(n)
-= n log n and scales them for comparison. - Plots experimental vs
-adjusted theoretical merge times on a log--log scale.
+### 2. graphs.py
+- Python script to visualize experimental results.  
+- Computes theoretical values based on:  
+  \(T(n) = n \log n\)  
+- Scales theoretical values for comparison.  
+- Generates a **log-log plot** comparing experimental merge times with the adjusted theoretical curve.
 
-How to Run
+---
 
-Java Program
+## How to Run
 
-Compile the Java file: javac MergeSortedLists_Aryan.java
+### Java Program
 
-Run the program: java MergeSortedLists_Aryan
+1. Compile:
+   ```bash
+   javac Merge-Sorted-Lists.java
+   ```
 
-Output: Displays total merge cost and runtime in milliseconds for the
-input lists.
+2. Run:
+   ```bash
+   java Merge-Sorted-Lists
+   ```
 
-Python Plot
+3. Output:
+   - Displays merge cost and runtime (in milliseconds) for the given input sizes.
 
-1.  Ensure Python 3 is installed along with matplotlib.
-2.  Run the script: python graphs.py
-3.  Output: Log--log plot showing experimental merge times vs adjusted
-    theoretical curve.
+---
 
-Purpose of This Project
+### Python Plot
 
-Theoretical Analysis: The greedy merge algorithm always merges the two
-smallest lists first using a priority queue (min-heap).
+1. Ensure Python 3 and `matplotlib` are installed.  
+2. Run:
+   ```bash
+   python graphs.py
+   ```
+3. Output:
+   - A log-log plot showing experimental merge times vs. adjusted theoretical \( n \log n \) curve.
 
-Time complexity: - Extract-min: O(log n) - Insert merged list: O(log
-n) - Performed (n -- 1) times
+---
 
-Total time complexity: O(n log n)
+## Purpose of This Project
 
-Experimental Validation: - Measures execution time using
-System.nanoTime(). - Compares merge cost and runtime for different
-inputs. - Scales theoretical values for visualization. - Experimental
-results follow the expected O(n log n) growth trend.
+### Theoretical Analysis
+The greedy merge algorithm repeatedly merges the **two smallest lists first**, implemented efficiently with a priority queue (min-heap).
 
-Conclusions: - Theoretical complexity: O(n log n) - Experimental
-runtimes validate the predicted trend. - Adjusted theoretical curve
-aligns closely with observed results on a log--log graph. - Minor
-runtime variations occur due to JVM warm-up and CPU scheduling.
+Operation costs:
+- `extract-min`: \(O(\log n)\)  
+- `insert`: \(O(\log n)\)  
+- Repeated **\(n - 1\)** times  
 
-GitHub Code Repository:
-https://github.com/ari-sax/MergingSortedLists.git
+**Total time complexity:**  
+\(O(n \log n)\)
 
-Notes: - Input should be positive integers. - Execution time may vary
-due to system performance and JVM optimization. - Min-heap ensures
-optimal merging efficiency.
+### Experimental Validation
+- Measures execution time using `System.nanoTime()`.  
+- Computes total merge cost for various input sizes.  
+- Scales the theoretical \( n \log n \) values for comparison.  
+- Experimental results follow the expected \(O(n \log n)\) growth trend.
+
+---
+
+## Conclusions
+- Theoretical complexity: \(O(n \log n)\).  
+- Experimental runtimes validate the theoretical prediction.  
+- Adjusted theoretical curve aligns with observed results on a log-log plot.  
+- Minor variations due to JVM warm-up and CPU scheduling are expected.
+
+---
+
+## GitHub Code Repository
+Project files are available at:  
+https://github.com/ari-sax/Merging-Sorted-Lists.git
+
+---
+
+## Notes
+- Input sizes must be positive integers.  
+- Execution time may vary depending on hardware and JVM optimizations.  
+- Min-heap ensures optimal merging efficiency.
